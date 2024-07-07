@@ -4,8 +4,8 @@ import { useLocale } from 'next-intl';
 import { useRouter } from 'next/navigation';
 import { useTransition } from 'react';
 import '@/styles/local-switcher.css';
-import enFlag from '@/images/en.png';
-import faFlag from '@/images/fa.png';
+import enFlag from '@/images/en.svg';
+import faFlag from '@/images/fa.svg';
 import Image from 'next/image';
 
 export default function LocalSwitcher() {

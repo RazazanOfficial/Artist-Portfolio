@@ -1,0 +1,37 @@
+.footer {
+    background-color: var(--cmSilver);
+}
+
+.social-media img {
+    padding: 7px;
+    border-radius: 25px;
+    border: 2px solid var(--cmBlack);
+}
+
+.social-media img:hover {
+    background-color: var(--cmWhite);
+    cursor: pointer;
+}
+
+.social-media-sec p {
+    text-align: center;
+}
+
+.name-sec h1 {
+    font-size: 3.8rem;
+}
+
+.bottom p,
+.bottom a {
+    color: var(--cmBlack);
+    margin-bottom: 0 !important;
+    line-height: 1.7;
+    font-size: 0.8rem;
+    text-decoration: none;
+}
+
+.bottom a:hover {
+    color: rgb(218, 13, 13);
+    text-decoration: underline;
+    margin-bottom: 5px;
+}

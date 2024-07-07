@@ -1,12 +1,23 @@
-import { useTranslations, useLocale } from 'next-intl';
+'use client';
+import { useLocale } from 'next-intl';
 import Link from 'next/link';
-import LocalSwitcher from '@/components/Local-switcher';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '@/styles/header.css'; // فرض می‌کنیم که فایل CSS شما در این مسیر است
+import '@/styles/header.css';
+import LocalSwitcher from './Local-switcher';
 
-export default function Header() {
-    const t = useTranslations('Navigation');
+export default function Header({ home, artwroks, contactMe, aboutMe }) {
     const locale = useLocale();
+
+    const closeNavbar = () => {
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+
+        if (navbarToggler && navbarCollapse) {
+            if (navbarCollapse.classList.contains('show')) {
+                navbarToggler.click();
+            }
+        }
+    };
 
     return (
         <header className="header container-fluid">
@@ -24,14 +35,15 @@ export default function Header() {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNav">
-                        <ul className="navbar-nav">
+                        <ul className="navbar-nav gap-3">
                             <li className="nav-item">
                                 <Link
                                     className="nav-link"
                                     aria-current="page"
                                     href={`/${locale}`}
+                                    onClick={closeNavbar}
                                 >
-                                    {t('home')}
+                                    {home}
                                 </Link>
                             </li>
                             <li className="nav-item">
@@ -39,24 +51,27 @@ export default function Header() {
                                     className="nav-link"
                                     aria-current="page"
                                     href={`/${locale}/artworks`}
+                                    onClick={closeNavbar}
                                 >
-                                    {t('artworks')}
+                                    {artwroks}
                                 </Link>
                             </li>
                             <li className="nav-item">
                                 <Link
                                     className="nav-link"
                                     href={`/${locale}/about-me`}
+                                    onClick={closeNavbar}
                                 >
-                                    {t('aboutMe')}
+                                    {aboutMe}
                                 </Link>
                             </li>
                             <li className="nav-item">
                                 <Link
                                     className="nav-link"
                                     href={`/${locale}/contact-me`}
+                                    onClick={closeNavbar}
                                 >
-                                    {t('contactMe')}
+                                    {contactMe}
                                 </Link>
                             </li>
                         </ul>
