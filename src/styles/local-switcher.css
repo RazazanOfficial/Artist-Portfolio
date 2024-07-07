@@ -1,0 +1,26 @@
+.flag-icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 8px;
+}
+
+.btnsecondary,
+.btnsecondary:hover,
+.btnsecondary:focus {
+    background-color: var(--cmSilver);
+    border: none;
+}
+
+.dropdown-toggle::after {
+    margin-left: 8px;
+}
+
+.dropdown-menu {
+    min-width: 160px;
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'FuturaLT';
+    src: url('../fonts/FuturaLT-Light.woff2') format('woff2'),
+         url('../fonts/FuturaLT-Light.woff') format('woff'),
+         url('../fonts/FuturaLT-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FuturaLT';
+    src: url('../fonts/FuturaLT-Book.woff2') format('woff2'),
+         url('../fonts/FuturaLT-Book.woff') format('woff'),
+         url('../fonts/FuturaLT-Book.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FuturaLT';
+    src: url('../fonts/FuturaLT-Bold.woff2') format('woff2'),
+         url('../fonts/FuturaLT-Bold.woff') format('woff'),
+         url('../fonts/FuturaLT-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}

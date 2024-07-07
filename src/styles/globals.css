@@ -1,0 +1,25 @@
+/* @import url('@/styles/font[Fa].css'); */
+*{
+  box-sizing: border-box !important;
+}
+:root {
+  --cmBlack: #181818;
+  --cmCoal: #282828;
+  --cmGray: #808080;
+  --cmSilver: #d4d4d4;
+  --cmWhite: #f5f5f5;
+}
+
+body {
+  background-color: var(--cmWhite);
+}
+
+main {
+  margin-top: 100px;
+}
+
+nav {
+  background-color: #efefef;
+  border-radius: 10px;
+  border: 2px solid #d6d6d6;
+}
