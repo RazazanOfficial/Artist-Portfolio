@@ -1,10 +1,17 @@
+// واقعا فوق العاده است ممنونم ازت.
+// این الان آدرس کامپوننت من هست:
+// src/components/ArtWorks.jsx
+// و این آدرس کامپوننتی هست که درونش ArtWorks.jsx را استفاده میکنم هست:
+// src/app/[locale]/artworks/page.jsx
+// حال میتونی برام یک کامپوننت پنل ادمین خیلی ساده بسازی که 
+
 'use client';
 import Image from 'next/image';
 import React, { useEffect } from 'react';
-import bg1 from '@/images/bg-1.jpg';
-import bg2 from '@/images/bg-2.jpg';
-import bg3 from '@/images/bg-4.jpg';
-import img4 from '@/images/banner-4.jpg';
+import bg1 from '@/images/bg-1.png';
+import bg2 from '@/images/bg-2.png';
+import bg3 from '@/images/bg-3.png';
+import img4 from '@/images/banner-4.png';
 import Link from 'next/link';
 import '@/styles/home-page.css';
 import { useLocale } from 'next-intl';

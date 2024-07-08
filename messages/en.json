@@ -3,6 +3,11 @@
         "smallBio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "btnArtwroks": "See Artworks"
     },
+    "artworks":{
+        "seeMore": "See more",
+        "sec" : "secound",
+        "notArtworkAvailable" : "not Artwork Available"
+    },
     "NotFoundPage": {
         "title": "Page Not Found",
         "description": "Oops! It seems like you've stumbled upon a page that doesn't exist. Don't worry, our internationalization magic is still hard at work on other parts of the app. Feel free to navigate back to explore more!"

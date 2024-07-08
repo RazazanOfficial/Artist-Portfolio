@@ -5,7 +5,7 @@ const withNextIntl = createNextIntlPlugin();
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['picsum.photos'], // افزودن دامنه مجاز برای تصاویر
+    domains: ['artworks-h-a.s3.ir-thr-at1.arvanstorage.ir'], // افزودن دامنه مجاز برای تصاویر
   },
 };
 
