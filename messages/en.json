@@ -3,10 +3,28 @@
         "smallBio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "btnArtwroks": "See Artworks"
     },
-    "artworks":{
+    "artworks": {
         "seeMore": "See more",
-        "sec" : "secound",
-        "notArtworkAvailable" : "not Artwork Available"
+        "sec": "secound",
+        "notArtworkAvailable": "not Artwork Available"
+    },
+    "aboutMe": {
+        "name": "Who is Hiva Aslani",
+        "quote": "Quote from the Artist",
+        "bioText1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "bioText3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    },
+    "contactMe": {
+        "contactMe": "Contact Me",
+        "error1": "Please enter the correct amount",
+        "error2": "Failed to send message, please try again later.",
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "email": "Email",
+        "subject": "Subject",
+        "message": "Message",
+        "success": "Message sent successfully!",
+        "submit": "Send your message"
     },
     "NotFoundPage": {
         "title": "Page Not Found",

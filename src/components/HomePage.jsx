@@ -1,17 +1,10 @@
-// واقعا فوق العاده است ممنونم ازت.
-// این الان آدرس کامپوننت من هست:
-// src/components/ArtWorks.jsx
-// و این آدرس کامپوننتی هست که درونش ArtWorks.jsx را استفاده میکنم هست:
-// src/app/[locale]/artworks/page.jsx
-// حال میتونی برام یک کامپوننت پنل ادمین خیلی ساده بسازی که 
-
 'use client';
-import Image from 'next/image';
+// import Image from 'next/image';
 import React, { useEffect } from 'react';
-import bg1 from '@/images/bg-1.png';
-import bg2 from '@/images/bg-2.png';
-import bg3 from '@/images/bg-3.png';
-import img4 from '@/images/banner-4.png';
+// import bg1 from '@/images/bg-1.png';
+// import bg2 from '@/images/bg-2.png';
+// import bg3 from '@/images/bg-3.png';
+// import img4 from '@/images/banner-4.png';
 import Link from 'next/link';
 import '@/styles/home-page.css';
 import { useLocale } from 'next-intl';
@@ -62,13 +55,13 @@ const HomePage = ({ smallBio, btnArtwroks }) => {
             >
                 <div className="carousel-inner">
                     <div className="carousel-item active">
-                        <Image src={bg1} className="d-block w-100" alt="..." />
+                        <img src={`https://artworks-h-a.s3.ir-thr-at1.arvanstorage.ir/home%2Fslider1.jpg?versionId=`}  className="d-block w-100" alt="..." />
                     </div>
                     <div className="carousel-item">
-                        <Image src={bg2} className="d-block w-100" alt="..." />
+                        <img src={`https://artworks-h-a.s3.ir-thr-at1.arvanstorage.ir/home%2Fslider2.jpg?versionId=`}  className="d-block w-100" alt="..." />
                     </div>
                     <div className="carousel-item">
-                        <Image src={bg3} className="d-block w-100" alt="..." />
+                        <img src={`https://artworks-h-a.s3.ir-thr-at1.arvanstorage.ir/home%2Fslider3.jpg?versionId=`}  className="d-block w-100" alt="..." />
                     </div>
                 </div>
                 <button
@@ -98,9 +91,9 @@ const HomePage = ({ smallBio, btnArtwroks }) => {
             </div>
             <h4 className="container">{smallBio}</h4>
             <div className="container d-flex gap-4 w-100 art-sec justify-content-center mt-5">
-                <Image src={img4} className="rounded-4" />
-                <Image src={img4} className="rounded-4" />
-                <Image src={img4} className="rounded-4" />
+                <img src={`https://artworks-h-a.s3.ir-thr-at1.arvanstorage.ir/home%2Fhome1.jpg?versionId=`} className="rounded-4" />
+                <img src={`https://artworks-h-a.s3.ir-thr-at1.arvanstorage.ir/home%2Fhome2.jpg?versionId=`} className="rounded-4" />
+                <img src={`https://artworks-h-a.s3.ir-thr-at1.arvanstorage.ir/home%2Fhome3.jpg?versionId=`} className="rounded-4" />
             </div>
             <div className='container d-flex justify-content-center'>
 
