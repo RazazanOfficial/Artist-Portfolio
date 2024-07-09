@@ -14,8 +14,12 @@
 
 body {
   background-color: var(--cmWhite);
+  overflow-x: hidden;
 }
-
+img{
+  pointer-events: none;
+  user-select: none;
+}
 main {
   margin-top: 100px;
 }

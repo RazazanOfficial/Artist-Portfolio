@@ -1,14 +1,10 @@
 .craousel-div {
-    margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px auto;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 90vw;
     max-width: 90vw;
-    -webkit-box-shadow: 3px 4px 8px 2px rgba(0, 0, 0, 0.6);
-    -moz-box-shadow: 3px 4px 8px 2px rgba(0, 0, 0, 0.6);
     box-shadow: 3px 4px 8px 2px rgba(0, 0, 0, 0.6);
     border-radius: 10px;
 }
@@ -37,6 +33,10 @@ h4 {
     width: 27vw;
 }
 
+.art-sec img:hover {
+    transform: scale(1.05);
+}
+
 .custom-btn {
     margin-top: 30px;
     outline: none;
@@ -48,7 +48,6 @@ h4 {
     text-decoration: none;
     font-weight: 500;
     font-size: 1.2rem;
-
 }
 
 .custom-btn:hover {
@@ -56,14 +55,20 @@ h4 {
     color: var(--cmWhite);
 }
 
-
 @media screen and (max-width: 640px) {
     .art-sec {
         flex-direction: column;
     }
 
     .art-sec img {
-        height: 90vw;
-        width: 90vw;
+        height: 60vw;
+        width: 60vw;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .small-bio {
+        font-size: 1rem;
+        word-spacing: 4px;
     }
 }

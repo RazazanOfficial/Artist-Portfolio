@@ -1,13 +1,9 @@
 'use client';
-// import Image from 'next/image';
-import React, { useEffect } from 'react';
-// import bg1 from '@/images/bg-1.png';
-// import bg2 from '@/images/bg-2.png';
-// import bg3 from '@/images/bg-3.png';
-// import img4 from '@/images/banner-4.png';
-import Link from 'next/link';
-import '@/styles/home-page.css';
 import { useLocale } from 'next-intl';
+import { useEffect } from 'react';
+import Link from 'next/link';
+
+import '@/styles/home-page.css';
 
 const HomePage = ({ smallBio, btnArtwroks }) => {
     const locale = useLocale();
@@ -18,15 +14,12 @@ const HomePage = ({ smallBio, btnArtwroks }) => {
             const images = document.querySelectorAll('.carousel-item img');
             if (carouselDiv) {
                 const width = window.innerWidth;
-                const navMargin = 100; // Margin for fixed nav
-                const extraMargin = 40; // Additional margin from top and bottom
-                const maxHeight =
-                    window.innerHeight - navMargin - extraMargin * 2;
+                const navMargin = 100;
+                const extraMargin = 40;
+                const maxHeight = window.innerHeight - navMargin - extraMargin * 2;
 
-                // Calculate height based on the width and maintain 16:9 ratio
                 let height = (width * 9) / 16;
 
-                // Ensure the height does not exceed the available height
                 if (height > maxHeight) {
                     height = maxHeight;
                 }
@@ -39,7 +32,7 @@ const HomePage = ({ smallBio, btnArtwroks }) => {
         };
 
         window.addEventListener('resize', updateHeight);
-        updateHeight(); // Initial call
+        updateHeight();
 
         return () => {
             window.removeEventListener('resize', updateHeight);
@@ -50,18 +43,18 @@ const HomePage = ({ smallBio, btnArtwroks }) => {
         <>
             <div
                 id="carouselExampleFade"
-                className="carousel slide carousel-fade craousel-div mx-auto"
+                className="carousel slide carousel-fade craousel-div mx-auto animate__animated animate__fadeInDown"
                 data-bs-ride="carousel"
             >
                 <div className="carousel-inner">
                     <div className="carousel-item active">
-                        <img src={`https://artworks-h-a.s3.ir-thr-at1.arvanstorage.ir/home%2Fslider1.jpg?versionId=`}  className="d-block w-100" alt="..." />
+                        <img src="https://artworks-h-a.s3.ir-thr-at1.arvanstorage.ir/home%2Fslider1.jpg?versionId=" className="d-block w-100" alt="..." />
                     </div>
                     <div className="carousel-item">
-                        <img src={`https://artworks-h-a.s3.ir-thr-at1.arvanstorage.ir/home%2Fslider2.jpg?versionId=`}  className="d-block w-100" alt="..." />
+                        <img src="https://artworks-h-a.s3.ir-thr-at1.arvanstorage.ir/home%2Fslider2.jpg?versionId=" className="d-block w-100" alt="..." />
                     </div>
                     <div className="carousel-item">
-                        <img src={`https://artworks-h-a.s3.ir-thr-at1.arvanstorage.ir/home%2Fslider3.jpg?versionId=`}  className="d-block w-100" alt="..." />
+                        <img src="https://artworks-h-a.s3.ir-thr-at1.arvanstorage.ir/home%2Fslider3.jpg?versionId=" className="d-block w-100" alt="..." />
                     </div>
                 </div>
                 <button
@@ -89,17 +82,14 @@ const HomePage = ({ smallBio, btnArtwroks }) => {
                     <span className="visually-hidden">Next</span>
                 </button>
             </div>
-            <h4 className="container">{smallBio}</h4>
+            <h4 className="container small-bio mx-auto animate__animated animate__fadeInDown">{smallBio}</h4>
             <div className="container d-flex gap-4 w-100 art-sec justify-content-center mt-5">
-                <img src={`https://artworks-h-a.s3.ir-thr-at1.arvanstorage.ir/home%2Fhome1.jpg?versionId=`} className="rounded-4" />
-                <img src={`https://artworks-h-a.s3.ir-thr-at1.arvanstorage.ir/home%2Fhome2.jpg?versionId=`} className="rounded-4" />
-                <img src={`https://artworks-h-a.s3.ir-thr-at1.arvanstorage.ir/home%2Fhome3.jpg?versionId=`} className="rounded-4" />
+                <img src="https://artworks-h-a.s3.ir-thr-at1.arvanstorage.ir/home%2Fhome1.jpg?versionId=" className="rounded-4" alt="Artwork 1" />
+                <img src="https://artworks-h-a.s3.ir-thr-at1.arvanstorage.ir/home%2Fhome2.jpg?versionId=" className="rounded-4" alt="Artwork 2" />
+                <img src="https://artworks-h-a.s3.ir-thr-at1.arvanstorage.ir/home%2Fhome3.jpg?versionId=" className="rounded-4" alt="Artwork 3" />
             </div>
             <div className='container d-flex justify-content-center'>
-
                 <Link className='custom-btn' href={`/${locale}/artworks`}>{btnArtwroks}</Link>
-         
-
             </div>
         </>
     );
