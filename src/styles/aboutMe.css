@@ -1,3 +1,7 @@
+.base-about-me{
+    width: 98vw;
+    margin: auto;
+}
 .about-me {
     padding: 20px;
 }
@@ -39,4 +43,30 @@ h2 {
     height: auto;
     display: block;
     margin: 0 auto;
+}
+
+@media screen and (max-width: 992px) {
+    .about-me{
+        width: 100% !important;
+        margin: 0px;
+
+    }
+}
+@media screen and (max-width: 767px) {
+    h2{
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .about-me{
+        padding: 0px;
+    }
+    h2{
+        font-size: 1.65rem;
+    }
+    .div2 p{
+        font-size: 1rem;
+        word-spacing: 1px;
+    }
 }

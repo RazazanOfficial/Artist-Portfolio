@@ -41,8 +41,8 @@
   color: var(--cmWhite);
 }
 .no-select{
-  /* user-select: none !important; */
-  /* pointer-events: none; */
+  user-select: none !important;
+  pointer-events: none;
 }
 @media (max-width: 768px) {
   .artworkImage {
