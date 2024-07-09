@@ -1,9 +1,10 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import PropTypes from 'prop-types';
 import imgWhite from '@/images/imgWhite.png';
 import '@/styles/artworks.css';
+import loading from '@/images/loading.gif';
 
 const ArtWorks = ({ totalArtworks, seeMore, sec, notArtworkAvailable }) => {
     const [visibleCount, setVisibleCount] = useState(6);
@@ -31,7 +32,7 @@ const ArtWorks = ({ totalArtworks, seeMore, sec, notArtworkAvailable }) => {
             newSources[index] = imgWhite;
             return newSources;
         });
-        setShowButton(false); // Hide the button if any image fails to load
+        setShowButton(false);
     };
 
     useEffect(() => {
@@ -64,9 +65,12 @@ const ArtWorks = ({ totalArtworks, seeMore, sec, notArtworkAvailable }) => {
                             <Image
                                 src={imageSources[index]}
                                 alt={`Artwork ${index + 1}`}
-                                width={300}
-                                height={300}
-                                className="artworkImage no-select"
+                                width={1700}
+                                height={1700}
+                                // objectFit='contain'
+                                // loader={loading}
+                                // style={{maxWidth:'100%', maxHeight: '100%', objectFit: 'contain'}}
+                                className="artworkImage no-select animate__animated animate__flipInX"
                                 onError={() => handleImageError(index)}
                             />
                         </div>

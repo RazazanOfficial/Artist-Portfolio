@@ -5,8 +5,6 @@
   margin-bottom: 15px;
 }
 
-/* artworks.css */
-
 .disabled-button {
   cursor: not-allowed;
   opacity: 0.5;
@@ -43,8 +41,8 @@
   color: var(--cmWhite);
 }
 .no-select{
-  user-select: none !important;
-  pointer-events: none;
+  /* user-select: none !important; */
+  /* pointer-events: none; */
 }
 @media (max-width: 768px) {
   .artworkImage {
@@ -55,7 +53,7 @@
 
 @media (max-width: 576px) {
   .artworkImage {
-    width: 95vw;
-    height: 95vw;
+    width: 75vw;
+    height: 75vw;
   }
 }
