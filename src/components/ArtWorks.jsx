@@ -2,9 +2,13 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import PropTypes from 'prop-types';
-import imgWhite from '@/images/imgWhite.png';
 import '@/styles/artworks.css';
 import dynamic from 'next/dynamic';
+
+// Import images
+const images = Array.from({ length: 15 }, (_, i) => {
+    return require(`@/images/artworks/artwork${i + 1}.jpg`).default;
+});
 
 const ArtWorks = ({ totalArtworks, seeMore, sec, notArtworkAvailable }) => {
     const [visibleCount, setVisibleCount] = useState(6);
@@ -13,30 +17,14 @@ const ArtWorks = ({ totalArtworks, seeMore, sec, notArtworkAvailable }) => {
     const [buttonCountdown, setButtonCountdown] = useState(3);
     const [buttonDisabled, setButtonDisabled] = useState(true);
 
-    const s3BaseUrl =
-        'https://artworks-h-a.s3.ir-thr-at1.arvanstorage.ir/artworks%2Fartwork';
-    const artworks = Array.from(
-        { length: totalArtworks },
-        (_, i) => `${s3BaseUrl}${i + 1}.jpg?versionId=`
-    );
-
     const showMore = () => {
         setVisibleCount((prevCount) => prevCount + 6);
         setButtonDisabled(true);
         setButtonCountdown(3);
     };
 
-    const handleImageError = (index) => {
-        setImageSources((prevSources) => {
-            const newSources = [...prevSources];
-            newSources[index] = imgWhite;
-            return newSources;
-        });
-        setShowButton(false);
-    };
-
     useEffect(() => {
-        setImageSources(artworks);
+        setImageSources(images);
     }, [totalArtworks]);
 
     useEffect(() => {
@@ -52,7 +40,7 @@ const ArtWorks = ({ totalArtworks, seeMore, sec, notArtworkAvailable }) => {
         }
     }, [buttonCountdown, buttonDisabled]);
 
-    if (!artworks || artworks.length === 0) {
+    if (!images || images.length === 0) {
         return <p>{notArtworkAvailable}</p>;
     }
 
@@ -63,19 +51,18 @@ const ArtWorks = ({ totalArtworks, seeMore, sec, notArtworkAvailable }) => {
                     <div key={index} className="col-12 col-sm-6 col-md-4 mb-4">
                         <div className="d-flex justify-content-center">
                             <Image
-                                src={imageSources[index]}
+                                src={artwork}
                                 alt={`Artwork ${index + 1}`}
                                 width={400}
                                 height={400}
-                                loading='lazy'
+                                loading="lazy"
                                 className="artworkImage no-select animate__animated animate__flipInX"
-                                onError={() => handleImageError(index)}
                             />
                         </div>
                     </div>
                 ))}
             </div>
-            {showButton && visibleCount < artworks.length && (
+            {showButton && visibleCount < images.length && (
                 <div className="d-flex justify-content-center mb-4">
                     <button
                         onClick={showMore}

@@ -2,8 +2,15 @@
 import { useLocale } from 'next-intl';
 import { useEffect } from 'react';
 import Link from 'next/link';
+import img1 from '@/images/slider/img1.jpg';
+import img2 from '@/images/slider/img2.jpg';
+import img3 from '@/images/slider/img3.jpg';
+import img4 from '@/images/home/img4.jpg';
+import img5 from '@/images/home/img5.jpg';
+import img6 from '@/images/home/img6.jpg';
 
 import '@/styles/home-page.css';
+import Image from 'next/image';
 
 const HomePage = ({ smallBio, btnArtwroks }) => {
     const locale = useLocale();
@@ -16,7 +23,8 @@ const HomePage = ({ smallBio, btnArtwroks }) => {
                 const width = window.innerWidth;
                 const navMargin = 100;
                 const extraMargin = 40;
-                const maxHeight = window.innerHeight - navMargin - extraMargin * 2;
+                const maxHeight =
+                    window.innerHeight - navMargin - extraMargin * 2;
 
                 let height = (width * 9) / 16;
 
@@ -48,13 +56,13 @@ const HomePage = ({ smallBio, btnArtwroks }) => {
             >
                 <div className="carousel-inner">
                     <div className="carousel-item active">
-                        <img src="https://artworks-h-a.s3.ir-thr-at1.arvanstorage.ir/home%2Fslider1.jpg?versionId=" className="d-block w-100" alt="..." />
+                        <Image src={img1} className="d-block w-100" alt="..." />
                     </div>
                     <div className="carousel-item">
-                        <img src="https://artworks-h-a.s3.ir-thr-at1.arvanstorage.ir/home%2Fslider2.jpg?versionId=" className="d-block w-100" alt="..." />
+                        <Image src={img2} className="d-block w-100" alt="..." />
                     </div>
                     <div className="carousel-item">
-                        <img src="https://artworks-h-a.s3.ir-thr-at1.arvanstorage.ir/home%2Fslider3.jpg?versionId=" className="d-block w-100" alt="..." />
+                        <Image src={img3} className="d-block w-100" alt="..." />
                     </div>
                 </div>
                 <button
@@ -82,14 +90,18 @@ const HomePage = ({ smallBio, btnArtwroks }) => {
                     <span className="visually-hidden">Next</span>
                 </button>
             </div>
-            <h4 className="container small-bio mx-auto animate__animated animate__fadeInDown">{smallBio}</h4>
+            <h4 className="container small-bio mx-auto animate__animated animate__fadeInDown">
+                {smallBio}
+            </h4>
             <div className="container d-flex gap-4 w-100 art-sec justify-content-center mt-5">
-                <img src="https://artworks-h-a.s3.ir-thr-at1.arvanstorage.ir/home%2Fhome1.jpg?versionId=" className="rounded-4" alt="Artwork 1" />
-                <img src="https://artworks-h-a.s3.ir-thr-at1.arvanstorage.ir/home%2Fhome2.jpg?versionId=" className="rounded-4" alt="Artwork 2" />
-                <img src="https://artworks-h-a.s3.ir-thr-at1.arvanstorage.ir/home%2Fhome3.jpg?versionId=" className="rounded-4" alt="Artwork 3" />
+                <Image src={img4} className="rounded-4" alt="Artwork 1" />
+                <Image src={img5} className="rounded-4" alt="Artwork 2" />
+                <Image src={img6} className="rounded-4" alt="Artwork 3" />
             </div>
-            <div className='container d-flex justify-content-center'>
-                <Link className='custom-btn' href={`/${locale}/artworks`}>{btnArtwroks}</Link>
+            <div className="container d-flex justify-content-center">
+                <Link className="custom-btn" href={`/${locale}/artworks`}>
+                    {btnArtwroks}
+                </Link>
             </div>
         </>
     );
