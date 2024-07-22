@@ -4,7 +4,7 @@ import Image from 'next/image';
 import PropTypes from 'prop-types';
 import imgWhite from '@/images/imgWhite.png';
 import '@/styles/artworks.css';
-import loading from '@/images/loading.gif';
+import dynamic from 'next/dynamic';
 
 const ArtWorks = ({ totalArtworks, seeMore, sec, notArtworkAvailable }) => {
     const [visibleCount, setVisibleCount] = useState(6);
@@ -65,11 +65,9 @@ const ArtWorks = ({ totalArtworks, seeMore, sec, notArtworkAvailable }) => {
                             <Image
                                 src={imageSources[index]}
                                 alt={`Artwork ${index + 1}`}
-                                width={1700}
-                                height={1700}
-                                // objectFit='contain'
-                                // loader={loading}
-                                // style={{maxWidth:'100%', maxHeight: '100%', objectFit: 'contain'}}
+                                width={400}
+                                height={400}
+                                loading='lazy'
                                 className="artworkImage no-select animate__animated animate__flipInX"
                                 onError={() => handleImageError(index)}
                             />
@@ -102,4 +100,4 @@ ArtWorks.propTypes = {
     totalArtworks: PropTypes.number.isRequired,
 };
 
-export default ArtWorks;
+export default dynamic(() => Promise.resolve(ArtWorks), { ssr: false });

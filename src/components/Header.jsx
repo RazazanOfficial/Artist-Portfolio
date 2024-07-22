@@ -2,8 +2,8 @@
 import { useLocale } from 'next-intl';
 import Link from 'next/link';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '@/styles/header.css';
 import LocalSwitcher from './Local-switcher';
+import '@/styles/header.css';
 
 export default function Header({ home, artwroks, contactMe, aboutMe }) {
     const locale = useLocale();

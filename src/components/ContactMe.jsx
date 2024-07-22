@@ -94,7 +94,7 @@ const ContactMe = ({
     };
 
     return (
-        <div className="container mt-5">
+        <div className="container mt-5 contact-me p-5 rounded-4 mb-5">
             <h2>{contactMe}</h2>
             <form onSubmit={handleSubmit}>
                 <div className="mb-3">
@@ -199,7 +199,7 @@ const ContactMe = ({
                         <div className="invalid-feedback">{errors.message}</div>
                     )}
                 </div>
-                <button type="submit" className="btn btn-primary">
+                <button type="submit" className="btn btn-success">
                     {submit}
                 </button>
             </form>

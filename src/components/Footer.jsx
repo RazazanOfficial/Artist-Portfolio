@@ -12,24 +12,39 @@ export default function Footer({ copyright, developer, contact, sayMyName }) {
                     <div className="social-media-sec">
                         <p>{contact}</p>
                         <div className="social-media d-flex gap-2">
-                            <Image
-                                src={email}
-                                width={45}
-                                height={45}
-                                alt="Email"
-                            />
-                            <Image
-                                src={whatsapp}
-                                width={45}
-                                height={45}
-                                alt="WhatsApp"
-                            />
-                            <Image
-                                src={instagram}
-                                width={45}
-                                height={45}
-                                alt="Instagram"
-                            />
+                            <Link
+                                href="mailto:Hiav.aslani@gmail.com"
+                                target="_blank"
+                            >
+                                <Image
+                                    src={email}
+                                    width={45}
+                                    height={45}
+                                    alt="Email"
+                                />
+                            </Link>
+                            <Link
+                                href="https://wa.me/989029025502"
+                                target="_blank"
+                            >
+                                <Image
+                                    src={whatsapp}
+                                    width={45}
+                                    height={45}
+                                    alt="WhatsApp"
+                                />
+                            </Link>
+                            <Link
+                                href="https://www.instagram.com/Art_by_hiva/"
+                                target="_blank"
+                            >
+                                <Image
+                                    src={instagram}
+                                    width={45}
+                                    height={45}
+                                    alt="Instagram"
+                                />
+                            </Link>
                         </div>
                     </div>
                     <div className="name-sec">
@@ -39,7 +54,9 @@ export default function Footer({ copyright, developer, contact, sayMyName }) {
                 <hr />
                 <div className="bottom d-flex flex-column justify-content-between w-100 text-center">
                     <p>{copyright}</p>
-                    <Link href="https://meraj-razazan.ir" target='_blank'>{developer}</Link>
+                    <Link href="https://meraj-razazan.ir" target="_blank">
+                        {developer}
+                    </Link>
                 </div>
             </div>
         </div>

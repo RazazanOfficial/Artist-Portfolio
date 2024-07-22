@@ -1,9 +1,10 @@
 /* @import url('@/styles/font[Fa].css'); */
-*{
+* {
   box-sizing: border-box !important;
   transition: .3s ease-in-out;
   margin: 0px;
 }
+
 :root {
   --cmBlack: #181818;
   --cmCoal: #282828;
@@ -16,10 +17,12 @@ body {
   background-color: var(--cmWhite);
   overflow-x: hidden;
 }
-img{
+
+img {
   /* pointer-events: none; */
   /* user-select: none; */
 }
+
 main {
   margin-top: 100px;
 }
@@ -28,4 +31,20 @@ nav {
   background-color: #efefef;
   border-radius: 10px;
   border: 2px solid #d6d6d6;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ebebeb;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  /* -webkit-border-radius: 10px;
+  border-radius: 10px; */
+  background: var(--cmGray);
 }

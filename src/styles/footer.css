@@ -35,3 +35,27 @@
     text-decoration: underline;
     margin-bottom: 5px;
 }
+
+@media (max-width: 510px) {
+    .name-sec h1 {
+        font-size: 3rem !important;
+    }
+}
+
+@media (max-width: 450px) {
+    .name-sec h1 {
+        font-size: 2.3rem !important;
+    }
+}
+
+@media (max-width: 390px) {
+    .name-sec h1 {
+        font-size: 1.9rem !important;
+    }
+}
+
+@media (max-width: 346px) {
+    .name-sec h1 {
+        font-size: 1.5rem !important;
+    }
+}

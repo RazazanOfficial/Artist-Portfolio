@@ -4,14 +4,15 @@ import '@/styles/globals.css';
 import '@/styles/font[En].css';
 import '@/styles/font[Fa].css';
 import { useTranslations } from 'next-intl';
-import 'react-loading-skeleton/dist/skeleton.css'
 import 'animate.css';
 
 export const metadata = {
     title: 'Hiva Aslany',
     description: 'Hiva Aslany personal website',
+    icons: {
+        icon: '/favicon.ico',
+    },
 };
-
 export default function RootLayout({ children, params: { locale } }) {
     const tf = useTranslations('Footer');
     const th = useTranslations('Navigation');

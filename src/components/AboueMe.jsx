@@ -31,7 +31,7 @@ const AboutMe = ({ name, bioText1, bioText2, bioText3, bioText4, quote }) => {
                     </div>
                     <div className="col-md-4">
                         <img
-                            src="https://artworks-h-a.s3.ir-thr-at1.arvanstorage.ir/aboutme%2Faboutme1.jpg?versionId="
+                            src="https://artworks-h-a.s3.ir-thr-at1.arvanstorage.ir/aboutme%2Faboutme2.jpg?versionId="
                             className="img-fluid"
                             alt="Artwork"
                         />
